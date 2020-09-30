@@ -1,0 +1,2 @@
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge3Repo\obj\Debug\Challenge3_KomodoBadgesRepo.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge3Repo\obj\Debug\Challenge3_KomodoBadgesRepo.csproj.CoreCompileInputs.cache
