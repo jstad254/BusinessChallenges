@@ -1,20 +1,23 @@
-﻿using System;
+﻿using Challenge1_KomodoCafeRepo;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Challenge1_KomodoCafe
 {
     class ProgramUI
     {
         private MenuRepository _menuRepository = new MenuRepository();
-
+        // Method to start running app
         public void Run()
         {
             ProgramMenu();
         }
+        // Method to display and get selection from user
         private void ProgramMenu()
         {
             bool run = true;
@@ -52,21 +55,56 @@ namespace ConsoleApp1
                 Console.Clear();
             }
         }
-        // Method to view menu
+        // Call for method to view menu
         private void ViewMenu()
         {
-
+            Console.Clear();
+            List<Menu> _listOfMenus = _menuRepository.DisplayMenu();
         }
-        // Method to add menu item
+        // Call for method to add menu item
         private void AddMenuItem()
         {
-
+            Console.Clear();
+            Menu newMenu = new Menu();
+            Console.Write("Please enter the meal number: ");
+            newMenu.Number = Console.ReadLine();
+            Console.Write("Please enter the meal name: ");
+            newMenu.Name = Console.ReadLine();
+            Console.Write("Please enter the meal description: ");
+            newMenu.Description = Console.ReadLine();
+            Console.Write("Please enter the meal price: $");
+            newMenu.Price = Decimal.Parse(Console.ReadLine());
+            Console.Write("Please enter the first ingredient: ");
+            newMenu.Ingredients.Add(Console.ReadLine());
+            string running = "y";
+            while (running.Contains("y"))
+            {
+                Console.WriteLine("Is there another ingredient? (y/n): ");
+                Console.ReadLine().ToLower();
+                if (running.Contains("y"))
+                {
+                    Console.Write("Please enter the next ingredient");
+                    newMenu.Ingredients.Add(Console.ReadLine());
+                }
+            }
+                _menuRepository.AddToMenu(newMenu);
         }
-        // Method to delete menu item
+        // Call for method to delete menu item
         private void DeleteMenuItem()
         {
-
+            Console.Clear();
+            ViewMenu();
+            Console.Write("Please enter the number of the menu item to delete: ");
+            string number = Console.ReadLine();
+            bool deleteMethod = _menuRepository.RemoveFromMenu(number);
+            if(deleteMethod)
+            {
+                Console.WriteLine("Menu item was deleted!");
+            }
+            else
+            {
+                Console.WriteLine("Unable to delete!");
+            }
         }
-
     }
 }

@@ -1,0 +1,10 @@
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\obj\Debug\Challenge1_KomodoCafe.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\obj\Debug\Challenge1_KomodoCafe.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\bin\Debug\Challenge1_Repo.dll
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\bin\Debug\Challenge1_Repo.pdb
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\obj\Debug\Challenge1_KomodoCafe.csproj.CopyComplete
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

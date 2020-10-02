@@ -1,0 +1,6 @@
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\bin\Debug\Challenge1_Repo.dll
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\bin\Debug\Challenge1_Repo.pdb
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\obj\Debug\Challenge1_KomodoCafeRepo.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\obj\Debug\Challenge1_KomodoCafeRepo.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\obj\Debug\Challenge1_Repo.dll
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge1_Repo\obj\Debug\Challenge1_Repo.pdb

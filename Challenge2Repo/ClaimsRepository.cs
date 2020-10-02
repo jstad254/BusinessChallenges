@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Challenge2Repo
 {
-    class ClaimsRepository
+    public class ClaimsRepository
     {
         Claims claims = new Claims();
 
@@ -24,7 +24,6 @@ namespace Challenge2Repo
         }
 
         // Update       no updating required
-
         // Delete       Delete claim from queue... dequeue?
         public void DeleteClaims(Claims claim)
         {

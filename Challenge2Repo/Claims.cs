@@ -8,7 +8,7 @@ namespace Challenge2Repo
 {
     public enum ClaimType
     {
-        Car,
+        Car = 1,
         Home,
         Theft
     }
@@ -20,11 +20,21 @@ namespace Challenge2Repo
         public decimal ClaimAmt { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
-        public TimeSpan ElapsedTime { get; set; }
         public bool IsValid { get; set; }
+        public Queue<Claims> ClaimQueue { get; set; }
         public Claims()
         {
 
+        }
+        public Claims(int claimID, ClaimType typeOfClaim, string description, decimal claimAmt, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid)
+        {
+            ClaimID = claimID;
+            TypeOfClaim = typeOfClaim;
+            Description = description;
+            ClaimAmt = claimAmt;
+            DateOfIncident = dateOfIncident;
+            DateOfClaim = dateOfClaim;
+            IsValid = isValid;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Challenge2Repo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -10,7 +11,7 @@ namespace Challenge2
 {
     class ProgramUI
     {
-        ClaimsRepository claimsRepository = new ClaimsRepository();
+        private ClaimsRepository _claimsRepository = new ClaimsRepository();
         // Entry point
         public void Run()
         {
@@ -64,10 +65,19 @@ namespace Challenge2
         {
 
         }
-        //Mehtod to enter new claim
+        //Method to enter new claim
         private void NewClaim()
         {
-
+            Console.Clear();
+            Claims claims = new Claims();
+            Console.Write("Please enter the meal number: ");
+            newMenu.Number = Console.ReadLine();
+            Console.Write("Please enter the meal name: ");
+            newMenu.Name = Console.ReadLine();
+            Console.Write("Please enter the meal description: ");
+            newMenu.Description = Console.ReadLine();
+            Console.Write("Please enter the meal price: $");
+            newMenu.Price = Decimal.Parse(Console.ReadLine());
         }
 
         
