@@ -1,33 +1,35 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Challenge2Repo
+namespace Challenge2_KomodoClaimsDeptRepo
 {
     public class ClaimsRepository
     {
-        Claims claims = new Claims();
+        //Claims claims = new Claims();
 
-        private List<Claims> _listOfClaims = new List<Claims>();
+        private Queue<Claims> _claimQueue = new Queue<Claims>();
 
         // Create       Add new claim
         public void AddClaims(Claims claim)
         {
-            _listOfClaims.Add(claim);
+            _claimQueue.Enqueue(claim);
+
         }
         // Read         List all claims in queue
-        public List<Claims> GetClaims()
+        public Queue<Claims> GetClaims()
         {
-            return _listOfClaims;
+            return _claimQueue;
         }
 
         // Update       no updating required
         // Delete       Delete claim from queue... dequeue?
-        public void DeleteClaims(Claims claim)
+        public void DequeueClaims(Claims claim)
         {
-            _listOfClaims.Remove(claim);
+            _claimQueue.Dequeue(claim);
         }
     }
 }

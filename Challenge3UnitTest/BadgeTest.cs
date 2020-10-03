@@ -10,17 +10,20 @@ namespace Challenge3UnitTest
         [TestMethod]
         public void TestMethod1()
         {
-            // Arrange      Set up the necessary pieces to run code
-            string firstName = "Nick";
-            string lastName = "Perry";
-            int id = 1;
-            DateTime myBirthday = new DateTime(2000, 8, 29);
+            // Arrange
+            //      Make an instance of the repository
+            //      Make an instance of the business object
+            //      Get the count before we act             
 
-            // Act          Run code we want to make sure works
-            Badge testBadge = new Badges(firstName, lastName, id, myBirthday);
+            // Act
+            //      Run the add method            
+
             // Assert
-            Assert.AreEqual(LastName, testUser.LastName);
-
+            //      that the count of the list in the repository is greater than
+            //      the initial count
+            //      check that the first business object in your "Get all" method
+            //      is the object you just added
         }
+    }
     }
 }

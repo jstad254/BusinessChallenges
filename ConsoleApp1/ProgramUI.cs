@@ -60,6 +60,11 @@ namespace Challenge1_KomodoCafe
         {
             Console.Clear();
             List<Menu> _listOfMenus = _menuRepository.DisplayMenu();
+            // Display object parameters on each line
+            foreach (Menu menuItem in _listOfMenus)
+            {
+                Console.WriteLine($"Number: {menuItem.Number} {menuItem.Name} - {menuItem.Description}  Price: {menuItem.Price}");
+            }
         }
         // Call for method to add menu item
         private void AddMenuItem()

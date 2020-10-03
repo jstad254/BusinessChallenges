@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Challenge2
+namespace Challenge2_KomodoClaimsDept
 {
     class Program
     {

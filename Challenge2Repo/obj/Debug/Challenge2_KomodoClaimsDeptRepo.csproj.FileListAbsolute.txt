@@ -1,0 +1,2 @@
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge2Repo\obj\Debug\Challenge2_KomodoClaimsDeptRepo.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GB_BusinessChallanges\Challenge2Repo\obj\Debug\Challenge2_KomodoClaimsDeptRepo.csproj.CoreCompileInputs.cache
