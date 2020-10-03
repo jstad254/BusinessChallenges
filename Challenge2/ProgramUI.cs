@@ -61,7 +61,7 @@ namespace Challenge2_KomodoClaimsDept
         {
             Console.Clear();
             Console.WriteLine("ClaimID     Type     Description          Amount     DateOfAccident     DateOfClaim     IsValid");
-            Queue<Claims> _claimQueue = _claimQueue.GetClaims();
+            Queue<Claims> claimQueue = _claimQueue.GetClaims();
             // Display object parameters on each line
             foreach (Claims claim in _claimQueue)
             {
@@ -73,7 +73,8 @@ namespace Challenge2_KomodoClaimsDept
         private void NextClaim()
         {
             Console.Clear();
-            Queue<Claims> _claimQueue = _claimQueue.Peek()
+            Queue<Claims> claimQueue = _claimQueue.GetClaims();
+            claimQueue.Peek()
             {
                 Console.WriteLine($"ClaimID: {claim.ClaimID}\n" +
                     $"\n" +
@@ -94,8 +95,9 @@ namespace Challenge2_KomodoClaimsDept
             string ans = Console.ReadLine().ToLower();
             if (ans.Contains("y"))
             {
-                Queue<Claims> _claimQueue = _claimQueue.DequeueClaims();
-                Console.WriteLine("");
+                _claimQueue.DequeueClaims(claim);
+                Console.WriteLine("Claim was taken off of queue!");
+                Console.ReadKey();
             }
         }
         //Call method to enter new claim
@@ -104,13 +106,13 @@ namespace Challenge2_KomodoClaimsDept
             Console.Clear();
             Claims newClaims = new Claims();
             Console.Write("Please enter the claim ID: ");
-            newClaims.ID = Console.ReadLine();
+            newClaims.ClaimID = Console.ReadLine();
             Console.Write("Please enter the claim type... Car, Home, or Theft: ");
             newClaims.TypeOfClaim = Console.ReadLine();
             Console.Write("Please enter the claim description: ");
-            newClaims.Name = Console.ReadLine();
+            newClaims.Description = Console.ReadLine();
             Console.Write("Please enter the claim amount: $");
-            newClaims.Price = Decimal.Parse(Console.ReadLine());
+            newClaims.ClaimAmt = Decimal.Parse(Console.ReadLine());
             Console.Write("Please enter the date the incident occurred as dd/mm/yyyy: ");
             DateTime DI = DateTime.Parse(Console.ReadLine());
             newClaims.DateOfIncident = DI;
@@ -126,7 +128,7 @@ namespace Challenge2_KomodoClaimsDept
             {
                 newClaims.IsValid = false;
             }
-            _claimsRepository.AddClaims(newclaims);
+            _claimsRepository.AddClaims(newClaims);
         }
         private void SeedClaims()
         {
@@ -136,13 +138,9 @@ namespace Challenge2_KomodoClaimsDept
             DateTime C2DC = DateTime.Parse("04/12/2018");
             DateTime C3DI = DateTime.Parse("04/27/2018");
             DateTime C3DC = DateTime.Parse("06/01/2018");
-
-
             Claims claim1 = new Claims("1", "Car", "Car accident on 465.", 400.00m, C1DI, C1DC, true);
             Claims claim2 = new Claims("2", "Home", "House fire in kitchen.", 4000.00m, C2DI, C2DC, true);
             Claims claim3 = new Claims("3", "Theft", "Stolen pancakes.", 4.00m, C3DI, C3DC, false);
-
-
             _claimsRepository.AddClaims(claim1);
             _claimsRepository.AddClaims(claim2);
             _claimsRepository.AddClaims(claim3);
