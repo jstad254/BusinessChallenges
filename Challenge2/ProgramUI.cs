@@ -61,9 +61,9 @@ namespace Challenge2_KomodoClaimsDept
         {
             Console.Clear();
             Console.WriteLine("ClaimID     Type     Description          Amount     DateOfAccident     DateOfClaim     IsValid");
-            Queue<Claims> claimQueue = _claimQueue.GetClaims();
+            Queue<Claims> claimQueue = _claimsRepository.GetClaims();
             // Display object parameters on each line
-            foreach (Claims claim in _claimQueue)
+            foreach (Claims claim in _claimsRepository)
             {
                 Console.WriteLine($"Claim: {claim.ClaimID} {claim.TypeOfClaim} {claim.Description} {claim.ClaimAmt}{claim.DateOfIncident}{claim.DateOfClaim}{claim.IsValid}");
             }
@@ -73,7 +73,7 @@ namespace Challenge2_KomodoClaimsDept
         private void NextClaim()
         {
             Console.Clear();
-            Queue<Claims> claimQueue = _claimQueue.GetClaims();
+            Queue<Claims> claimQueue = _claimsRepository.GetClaims();
             claimQueue.Peek()
             {
                 Console.WriteLine($"ClaimID: {claim.ClaimID}\n" +
